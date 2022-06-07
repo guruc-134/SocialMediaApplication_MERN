@@ -32,4 +32,10 @@
 - provider : going to keep track of the store ( global state) which can be accessed from anywhere
 - Thunk :Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the function's body once the asynchronous operations have been completed
 - Reducer : It is function which accepts a state and an action, then based on action type then it performs a logic ... / state change
-- 
+**Note** one main reson, apart from consistency that we use variables for actions rather than the strings diirectly is error reporting. ...
+
+for eg if we were dispatching an action ..."FETCH_ALL", but we spelled it differemt
+our applications functionality would break but we wouldnot be able to trace the error, since its just a string ... 
+
+instead if we were using variables and then haver misspelled them then we can easily locate that mistake since we would be getting an error for using 
+an unknoen variable
