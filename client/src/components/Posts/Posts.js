@@ -6,7 +6,6 @@ import Post from './Post/Post.js';
 import useStyles from './styles';
 function Posts({setCurrentId}) {
   const posts = useSelector((state)=> state.posts)
-  console.log("loading posts again with the data",posts );
   const classes = useStyles()
   return (
     !posts.length? <CircularProgress/> : 

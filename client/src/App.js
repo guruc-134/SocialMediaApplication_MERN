@@ -13,7 +13,6 @@ function App() {
 
   // as soon as the component is loading we are dispatching an action which is the getPosts 
   useEffect(()=>{
-    console.log("app js is being updated!!",currentId);
     dispatch(getPosts()) ;
   },[currentId,dispatch])
   return (
